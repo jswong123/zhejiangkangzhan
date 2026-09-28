@@ -8,7 +8,7 @@
   "startTime": "06:00",
   "hoursPerTurn": 6,
   "startingPhase": "japanese",
-  "version": "2.5-hangzhou-complete-water-system",
+  "version": "2.6-hangzhou-westlake-wall-zijingang",
   "notes": [
     "总时限25回合。",
     "杭州城防以旧城垣节点、街垒和阻绝线抽象表示，不代表1937年仍有完整连续古城墙。",
@@ -18,7 +18,8 @@
     "V2.4：钱塘江改为实体不可通行水域带；陆军仅允许经钱塘江大桥通行。",
     "V2.4：临安、青山镇增设中国守军；中日双方增援重新校准。",
     "V2.5：补全西湖、西溪湿地、青山湖、京杭大运河；湖泊/运河实体化，西溪采用湿地+内部水道。",
-    "V2.5：钱塘江继续仅允许经钱塘江大桥通过；大运河仅允许经指定桥梁通过。"
+    "V2.5：钱塘江继续仅允许经钱塘江大桥通过；大运河仅允许经指定桥梁通过。",
+    "V2.6：保留并强化现有西湖与杭州旧城城防表现；新增紫金港地名；取消告岭战略目标判定，但保留告岭地名及既有阵地。"
   ],
   "map": {
     "id": "hangzhou_1937",
@@ -9934,7 +9935,7 @@
         "q": 8,
         "r": 8,
         "type": "pass",
-        "strategicObjective": true
+        "strategicObjective": false
       },
       {
         "id": "yangjiaoling",
@@ -10519,6 +10520,15 @@
         "q": 65,
         "r": 37,
         "type": "hill",
+        "strategicObjective": false
+      },
+      {
+        "id": "zijingang",
+        "name": "紫金港",
+        "nameZh": "紫金港",
+        "q": 60,
+        "r": 36,
+        "type": "locality",
         "strategicObjective": false
       }
     ],
@@ -11811,6 +11821,12 @@
         "q": 66,
         "r": 43,
         "type": "place"
+      },
+      {
+        "name": "紫金港",
+        "q": 60,
+        "r": 36,
+        "type": "locality"
       }
     ]
   },
