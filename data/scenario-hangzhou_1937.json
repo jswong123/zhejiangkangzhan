@@ -8,7 +8,7 @@
   "startTime": "06:00",
   "hoursPerTurn": 6,
   "startingPhase": "japanese",
-  "version": "3.0-hangzhou-geography-wall-fix",
+  "version": "3.2-hangzhou-wall-defensiveline-fix",
   "notes": [
     "总时限25回合。",
     "杭州城防以旧城垣节点、街垒和阻绝线抽象表示，不代表1937年仍有完整连续古城墙。",
@@ -23,8 +23,9 @@
     "V2.7：纠正紫金港位置；将西湖水面移至杭州旧城西侧并实体化为water；杭州旧城墙重做为连续闭合wallEdges；其余部队、增援、道路、水系和战略目标保持不变；告岭仍非战略目标。",
     "V2.8：仅修正杭州城墙显示。将旧城墙改为逐格相邻的闭合城防线，避免渲染为散落长黑线；西湖、紫金港、部队、增援、道路、水系及战略目标保持V2.7不变。",
     "V2.9：缩小并重新塑形西湖实体水域，使其更贴近杭州旧城西侧且恢复西湖南、西侧山地；调整富阳地图标记至杭州西南、钱塘江上游方向；保留V2.8杭州城墙修正。",
-    "V3.0：富阳移至富春江北岸陆地县城位置；西湖北缘退水，恢复岳庙、宝石山及北岸陆地；杭州旧城墙增加明确闭合段。"
-    "V3.1：修改岳坟位置显示，富阳标记点。"
+    "V3.0：富阳移至富春江北岸陆地县城位置；西湖北缘退水，恢复岳庙、宝石山及北岸陆地；杭州旧城墙增加明确闭合段。",
+    "V3.1：修改岳坟位置显示，富阳标记点。",
+    "V3.2：保留V3.1岳坟与富阳坐标不变；修复JSON语法；wallEdges仅保留杭州旧城闭合城防线，外围阻绝线移入defensiveLines，避免与城墙混绘。"
   ],
   "map": {
     "id": "hangzhou_1937",
@@ -11509,216 +11510,6 @@
     "wallEdges": [
       {
         "from": {
-          "q": 67,
-          "r": 43
-        },
-        "to": {
-          "q": 68,
-          "r": 45
-        },
-        "section": "南星桥阻绝线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 950,
-        "maxHp": 950
-      },
-      {
-        "from": {
-          "q": 68,
-          "r": 45
-        },
-        "to": {
-          "q": 69,
-          "r": 48
-        },
-        "section": "江干—闸口阻绝线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 950,
-        "maxHp": 950
-      },
-      {
-        "from": {
-          "q": 69,
-          "r": 48
-        },
-        "to": {
-          "q": 69,
-          "r": 51
-        },
-        "section": "桥北接近线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 950,
-        "maxHp": 950
-      },
-      {
-        "from": {
-          "q": 69,
-          "r": 51
-        },
-        "to": {
-          "q": 70,
-          "r": 52
-        },
-        "section": "钱塘江大桥北桥头防御",
-        "status": "intact",
-        "type": "wall",
-        "hp": 950,
-        "maxHp": 950
-      },
-      {
-        "from": {
-          "q": 70,
-          "r": 52
-        },
-        "to": {
-          "q": 71,
-          "r": 53
-        },
-        "section": "钱塘江大桥南桥头防御",
-        "status": "intact",
-        "type": "wall",
-        "hp": 950,
-        "maxHp": 950
-      },
-      {
-        "from": {
-          "q": 64,
-          "r": 27
-        },
-        "to": {
-          "q": 68,
-          "r": 26
-        },
-        "section": "杭州北郊第一阻绝线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 700,
-        "maxHp": 700
-      },
-      {
-        "from": {
-          "q": 68,
-          "r": 26
-        },
-        "to": {
-          "q": 73,
-          "r": 27
-        },
-        "section": "杭州北郊第一阻绝线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 700,
-        "maxHp": 700
-      },
-      {
-        "from": {
-          "q": 73,
-          "r": 27
-        },
-        "to": {
-          "q": 77,
-          "r": 30
-        },
-        "section": "杭州东北第一阻绝线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 700,
-        "maxHp": 700
-      },
-      {
-        "from": {
-          "q": 77,
-          "r": 30
-        },
-        "to": {
-          "q": 78,
-          "r": 34
-        },
-        "section": "杭州城东第一阻绝线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 700,
-        "maxHp": 700
-      },
-      {
-        "from": {
-          "q": 78,
-          "r": 34
-        },
-        "to": {
-          "q": 74,
-          "r": 38
-        },
-        "section": "杭州城东第二阻绝线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 700,
-        "maxHp": 700
-      },
-      {
-        "from": {
-          "q": 74,
-          "r": 38
-        },
-        "to": {
-          "q": 71,
-          "r": 43
-        },
-        "section": "杭州东南阻绝线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 750,
-        "maxHp": 750
-      },
-      {
-        "from": {
-          "q": 61,
-          "r": 29
-        },
-        "to": {
-          "q": 58,
-          "r": 32
-        },
-        "section": "西湖西北山地阻绝线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 650,
-        "maxHp": 650
-      },
-      {
-        "from": {
-          "q": 58,
-          "r": 32
-        },
-        "to": {
-          "q": 58,
-          "r": 37
-        },
-        "section": "西湖西侧山地阻绝线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 650,
-        "maxHp": 650
-      },
-      {
-        "from": {
-          "q": 58,
-          "r": 37
-        },
-        "to": {
-          "q": 61,
-          "r": 41
-        },
-        "section": "西湖西南山地阻绝线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 650,
-        "maxHp": 650
-      },
-      {
-        "from": {
           "q": 65,
           "r": 29
         },
@@ -12650,6 +12441,218 @@
         "q": 46,
         "r": 53,
         "type": "town"
+      }
+    ],
+    "defensiveLines": [
+      {
+        "from": {
+          "q": 67,
+          "r": 43
+        },
+        "to": {
+          "q": 68,
+          "r": 45
+        },
+        "section": "南星桥阻绝线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 950,
+        "maxHp": 950
+      },
+      {
+        "from": {
+          "q": 68,
+          "r": 45
+        },
+        "to": {
+          "q": 69,
+          "r": 48
+        },
+        "section": "江干—闸口阻绝线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 950,
+        "maxHp": 950
+      },
+      {
+        "from": {
+          "q": 69,
+          "r": 48
+        },
+        "to": {
+          "q": 69,
+          "r": 51
+        },
+        "section": "桥北接近线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 950,
+        "maxHp": 950
+      },
+      {
+        "from": {
+          "q": 69,
+          "r": 51
+        },
+        "to": {
+          "q": 70,
+          "r": 52
+        },
+        "section": "钱塘江大桥北桥头防御",
+        "status": "intact",
+        "type": "wall",
+        "hp": 950,
+        "maxHp": 950
+      },
+      {
+        "from": {
+          "q": 70,
+          "r": 52
+        },
+        "to": {
+          "q": 71,
+          "r": 53
+        },
+        "section": "钱塘江大桥南桥头防御",
+        "status": "intact",
+        "type": "wall",
+        "hp": 950,
+        "maxHp": 950
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 27
+        },
+        "to": {
+          "q": 68,
+          "r": 26
+        },
+        "section": "杭州北郊第一阻绝线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 700,
+        "maxHp": 700
+      },
+      {
+        "from": {
+          "q": 68,
+          "r": 26
+        },
+        "to": {
+          "q": 73,
+          "r": 27
+        },
+        "section": "杭州北郊第一阻绝线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 700,
+        "maxHp": 700
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 27
+        },
+        "to": {
+          "q": 77,
+          "r": 30
+        },
+        "section": "杭州东北第一阻绝线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 700,
+        "maxHp": 700
+      },
+      {
+        "from": {
+          "q": 77,
+          "r": 30
+        },
+        "to": {
+          "q": 78,
+          "r": 34
+        },
+        "section": "杭州城东第一阻绝线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 700,
+        "maxHp": 700
+      },
+      {
+        "from": {
+          "q": 78,
+          "r": 34
+        },
+        "to": {
+          "q": 74,
+          "r": 38
+        },
+        "section": "杭州城东第二阻绝线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 700,
+        "maxHp": 700
+      },
+      {
+        "from": {
+          "q": 74,
+          "r": 38
+        },
+        "to": {
+          "q": 71,
+          "r": 43
+        },
+        "section": "杭州东南阻绝线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 750,
+        "maxHp": 750
+      },
+      {
+        "from": {
+          "q": 61,
+          "r": 29
+        },
+        "to": {
+          "q": 58,
+          "r": 32
+        },
+        "section": "西湖西北山地阻绝线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 650,
+        "maxHp": 650
+      },
+      {
+        "from": {
+          "q": 58,
+          "r": 32
+        },
+        "to": {
+          "q": 58,
+          "r": 37
+        },
+        "section": "西湖西侧山地阻绝线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 650,
+        "maxHp": 650
+      },
+      {
+        "from": {
+          "q": 58,
+          "r": 37
+        },
+        "to": {
+          "q": 61,
+          "r": 41
+        },
+        "section": "西湖西南山地阻绝线",
+        "status": "intact",
+        "type": "wall",
+        "hp": 650,
+        "maxHp": 650
       }
     ]
   },
