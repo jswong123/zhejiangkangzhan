@@ -261,7 +261,7 @@ export const CAMPAIGNS = [
                     { id: "western_henan_hubei_1945", name: "豫西鄂北会战", dateText: "1945年3月—5月", location: "河南西部—湖北北部", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
                     { id: "west_hunan", name: "湘西会战", dateText: "1945年4月—6月", location: "湖南西部", status: "available", scenarioPath: "./data/scenario-west_hunan.json", unitsPath: "./data/units-west_hunan.json", factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, start:{year:1945,month:4,day:9,hour:8,minute:0,hoursPerTurn:6,startingPhase:"japanese"}, urbanDefense:false, wallSystem:false }
                 ]
-            }
+            },
           {
                 id: "zhejiang_resistance", name: "浙江抗战",
                 scenarios: [
