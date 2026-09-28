@@ -8,7 +8,7 @@
   "startTime": "06:00",
   "hoursPerTurn": 6,
   "startingPhase": "japanese",
-  "version": "2.6-hangzhou-westlake-wall-zijingang",
+  "version": "2.7-hangzhou-corrected-westlake-zijingang-citywall",
   "notes": [
     "总时限25回合。",
     "杭州城防以旧城垣节点、街垒和阻绝线抽象表示，不代表1937年仍有完整连续古城墙。",
@@ -19,7 +19,8 @@
     "V2.4：临安、青山镇增设中国守军；中日双方增援重新校准。",
     "V2.5：补全西湖、西溪湿地、青山湖、京杭大运河；湖泊/运河实体化，西溪采用湿地+内部水道。",
     "V2.5：钱塘江继续仅允许经钱塘江大桥通过；大运河仅允许经指定桥梁通过。",
-    "V2.6：保留并强化现有西湖与杭州旧城城防表现；新增紫金港地名；取消告岭战略目标判定，但保留告岭地名及既有阵地。"
+    "V2.6：保留并强化现有西湖与杭州旧城城防表现；新增紫金港地名；取消告岭战略目标判定，但保留告岭地名及既有阵地。",
+    "V2.7：纠正紫金港位置；将西湖水面移至杭州旧城西侧并实体化为water；杭州旧城墙重做为连续闭合wallEdges；其余部队、增援、道路、水系和战略目标保持不变；告岭仍非战略目标。"
   ],
   "map": {
     "id": "hangzhou_1937",
@@ -3490,6 +3491,21 @@
         "hill"
       ],
       [
+        60,
+        29,
+        "water"
+      ],
+      [
+        61,
+        29,
+        "water"
+      ],
+      [
+        62,
+        29,
+        "water"
+      ],
+      [
         63,
         29,
         "urban"
@@ -3630,9 +3646,29 @@
         "hill"
       ],
       [
+        59,
+        30,
+        "water"
+      ],
+      [
+        60,
+        30,
+        "water"
+      ],
+      [
+        61,
+        30,
+        "water"
+      ],
+      [
+        62,
+        30,
+        "water"
+      ],
+      [
         63,
         30,
-        "urban"
+        "water"
       ],
       [
         64,
@@ -3770,14 +3806,39 @@
         "hill"
       ],
       [
+        58,
+        31,
+        "water"
+      ],
+      [
+        59,
+        31,
+        "water"
+      ],
+      [
+        60,
+        31,
+        "water"
+      ],
+      [
+        61,
+        31,
+        "water"
+      ],
+      [
+        62,
+        31,
+        "water"
+      ],
+      [
         63,
         31,
-        "urban"
+        "water"
       ],
       [
         64,
         31,
-        "urban"
+        "water"
       ],
       [
         65,
@@ -3900,14 +3961,44 @@
         "hill"
       ],
       [
+        57,
+        32,
+        "water"
+      ],
+      [
+        58,
+        32,
+        "water"
+      ],
+      [
+        59,
+        32,
+        "water"
+      ],
+      [
+        60,
+        32,
+        "water"
+      ],
+      [
+        61,
+        32,
+        "water"
+      ],
+      [
+        62,
+        32,
+        "water"
+      ],
+      [
         63,
         32,
-        "urban"
+        "water"
       ],
       [
         64,
         32,
-        "urban"
+        "water"
       ],
       [
         65,
@@ -4020,14 +4111,44 @@
         "hill"
       ],
       [
+        57,
+        33,
+        "water"
+      ],
+      [
+        58,
+        33,
+        "water"
+      ],
+      [
+        59,
+        33,
+        "water"
+      ],
+      [
+        60,
+        33,
+        "water"
+      ],
+      [
+        61,
+        33,
+        "water"
+      ],
+      [
+        62,
+        33,
+        "water"
+      ],
+      [
         63,
         33,
-        "urban"
+        "water"
       ],
       [
         64,
         33,
-        "urban"
+        "water"
       ],
       [
         65,
@@ -4135,14 +4256,49 @@
         "hill"
       ],
       [
+        56,
+        34,
+        "water"
+      ],
+      [
+        57,
+        34,
+        "water"
+      ],
+      [
+        58,
+        34,
+        "water"
+      ],
+      [
+        59,
+        34,
+        "water"
+      ],
+      [
+        60,
+        34,
+        "water"
+      ],
+      [
+        61,
+        34,
+        "water"
+      ],
+      [
+        62,
+        34,
+        "water"
+      ],
+      [
         63,
         34,
-        "urban"
+        "water"
       ],
       [
         64,
         34,
-        "urban"
+        "water"
       ],
       [
         65,
@@ -4250,14 +4406,49 @@
         "hill"
       ],
       [
+        56,
+        35,
+        "water"
+      ],
+      [
+        57,
+        35,
+        "water"
+      ],
+      [
+        58,
+        35,
+        "water"
+      ],
+      [
+        59,
+        35,
+        "water"
+      ],
+      [
+        60,
+        35,
+        "water"
+      ],
+      [
+        61,
+        35,
+        "water"
+      ],
+      [
+        62,
+        35,
+        "water"
+      ],
+      [
         63,
         35,
-        "urban"
+        "water"
       ],
       [
         64,
         35,
-        "urban"
+        "water"
       ],
       [
         65,
@@ -4355,9 +4546,44 @@
         "hill"
       ],
       [
+        56,
+        36,
+        "water"
+      ],
+      [
+        57,
+        36,
+        "water"
+      ],
+      [
+        58,
+        36,
+        "water"
+      ],
+      [
+        59,
+        36,
+        "water"
+      ],
+      [
+        60,
+        36,
+        "water"
+      ],
+      [
+        61,
+        36,
+        "water"
+      ],
+      [
+        62,
+        36,
+        "water"
+      ],
+      [
         63,
         36,
-        "urban"
+        "water"
       ],
       [
         64,
@@ -4455,9 +4681,39 @@
         "hill"
       ],
       [
+        57,
+        37,
+        "water"
+      ],
+      [
+        58,
+        37,
+        "water"
+      ],
+      [
+        59,
+        37,
+        "water"
+      ],
+      [
+        60,
+        37,
+        "water"
+      ],
+      [
+        61,
+        37,
+        "water"
+      ],
+      [
+        62,
+        37,
+        "water"
+      ],
+      [
         63,
         37,
-        "urban"
+        "water"
       ],
       [
         64,
@@ -4543,6 +4799,36 @@
         55,
         38,
         "marsh"
+      ],
+      [
+        57,
+        38,
+        "water"
+      ],
+      [
+        58,
+        38,
+        "water"
+      ],
+      [
+        59,
+        38,
+        "water"
+      ],
+      [
+        60,
+        38,
+        "water"
+      ],
+      [
+        61,
+        38,
+        "water"
+      ],
+      [
+        62,
+        38,
+        "water"
       ],
       [
         63,
@@ -4638,6 +4924,26 @@
         57,
         39,
         "marsh"
+      ],
+      [
+        58,
+        39,
+        "water"
+      ],
+      [
+        59,
+        39,
+        "water"
+      ],
+      [
+        60,
+        39,
+        "water"
+      ],
+      [
+        61,
+        39,
+        "water"
       ],
       [
         63,
@@ -5127,22 +5433,22 @@
       [
         61,
         44,
-        "water"
+        "plain"
       ],
       [
         62,
         44,
-        "water"
+        "plain"
       ],
       [
         63,
         44,
-        "water"
+        "plain"
       ],
       [
         64,
         44,
-        "water"
+        "plain"
       ],
       [
         65,
@@ -5222,32 +5528,32 @@
       [
         60,
         45,
-        "water"
+        "plain"
       ],
       [
         61,
         45,
-        "water"
+        "plain"
       ],
       [
         62,
         45,
-        "water"
+        "plain"
       ],
       [
         63,
         45,
-        "water"
+        "plain"
       ],
       [
         64,
         45,
-        "water"
+        "plain"
       ],
       [
         65,
         45,
-        "water"
+        "plain"
       ],
       [
         97,
@@ -5337,42 +5643,42 @@
       [
         59,
         46,
-        "water"
+        "plain"
       ],
       [
         60,
         46,
-        "water"
+        "plain"
       ],
       [
         61,
         46,
-        "water"
+        "plain"
       ],
       [
         62,
         46,
-        "water"
+        "plain"
       ],
       [
         63,
         46,
-        "water"
+        "plain"
       ],
       [
         64,
         46,
-        "water"
+        "plain"
       ],
       [
         65,
         46,
-        "water"
+        "plain"
       ],
       [
         66,
         46,
-        "water"
+        "plain"
       ],
       [
         93,
@@ -5552,42 +5858,42 @@
       [
         59,
         47,
-        "water"
+        "plain"
       ],
       [
         60,
         47,
-        "water"
+        "plain"
       ],
       [
         61,
         47,
-        "water"
+        "plain"
       ],
       [
         62,
         47,
-        "water"
+        "plain"
       ],
       [
         63,
         47,
-        "water"
+        "plain"
       ],
       [
         64,
         47,
-        "water"
+        "plain"
       ],
       [
         65,
         47,
-        "water"
+        "plain"
       ],
       [
         66,
         47,
-        "water"
+        "plain"
       ],
       [
         88,
@@ -5782,42 +6088,42 @@
       [
         59,
         48,
-        "water"
+        "plain"
       ],
       [
         60,
         48,
-        "water"
+        "plain"
       ],
       [
         61,
         48,
-        "water"
+        "plain"
       ],
       [
         62,
         48,
-        "water"
+        "plain"
       ],
       [
         63,
         48,
-        "water"
+        "plain"
       ],
       [
         64,
         48,
-        "water"
+        "plain"
       ],
       [
         65,
         48,
-        "water"
+        "plain"
       ],
       [
         66,
         48,
-        "water"
+        "plain"
       ],
       [
         85,
@@ -6027,47 +6333,47 @@
       [
         58,
         49,
-        "water"
+        "plain"
       ],
       [
         59,
         49,
-        "water"
+        "plain"
       ],
       [
         60,
         49,
-        "water"
+        "plain"
       ],
       [
         61,
         49,
-        "water"
+        "plain"
       ],
       [
         62,
         49,
-        "water"
+        "plain"
       ],
       [
         63,
         49,
-        "water"
+        "plain"
       ],
       [
         64,
         49,
-        "water"
+        "plain"
       ],
       [
         65,
         49,
-        "water"
+        "plain"
       ],
       [
         66,
         49,
-        "water"
+        "plain"
       ],
       [
         80,
@@ -6297,47 +6603,47 @@
       [
         58,
         50,
-        "water"
+        "plain"
       ],
       [
         59,
         50,
-        "water"
+        "plain"
       ],
       [
         60,
         50,
-        "water"
+        "plain"
       ],
       [
         61,
         50,
-        "water"
+        "plain"
       ],
       [
         62,
         50,
-        "water"
+        "plain"
       ],
       [
         63,
         50,
-        "water"
+        "plain"
       ],
       [
         64,
         50,
-        "water"
+        "plain"
       ],
       [
         65,
         50,
-        "water"
+        "plain"
       ],
       [
         66,
         50,
-        "water"
+        "plain"
       ],
       [
         75,
@@ -6592,37 +6898,37 @@
       [
         59,
         51,
-        "water"
+        "plain"
       ],
       [
         60,
         51,
-        "water"
+        "plain"
       ],
       [
         61,
         51,
-        "water"
+        "plain"
       ],
       [
         62,
         51,
-        "water"
+        "plain"
       ],
       [
         63,
         51,
-        "water"
+        "plain"
       ],
       [
         64,
         51,
-        "water"
+        "plain"
       ],
       [
         65,
         51,
-        "water"
+        "plain"
       ],
       [
         67,
@@ -6907,37 +7213,37 @@
       [
         59,
         52,
-        "water"
+        "plain"
       ],
       [
         60,
         52,
-        "water"
+        "plain"
       ],
       [
         61,
         52,
-        "water"
+        "plain"
       ],
       [
         62,
         52,
-        "water"
+        "plain"
       ],
       [
         63,
         52,
-        "water"
+        "plain"
       ],
       [
         64,
         52,
-        "water"
+        "plain"
       ],
       [
         65,
         52,
-        "water"
+        "plain"
       ],
       [
         66,
@@ -7232,27 +7538,27 @@
       [
         60,
         53,
-        "water"
+        "plain"
       ],
       [
         61,
         53,
-        "water"
+        "plain"
       ],
       [
         62,
         53,
-        "water"
+        "plain"
       ],
       [
         63,
         53,
-        "water"
+        "plain"
       ],
       [
         64,
         53,
-        "water"
+        "plain"
       ],
       [
         65,
@@ -10140,7 +10446,7 @@
         "name": "西湖",
         "nameZh": "西湖",
         "q": 61,
-        "r": 35,
+        "r": 34,
         "type": "lake",
         "strategicObjective": false
       },
@@ -10526,8 +10832,8 @@
         "id": "zijingang",
         "name": "紫金港",
         "nameZh": "紫金港",
-        "q": 60,
-        "r": 36,
+        "q": 58,
+        "r": 27,
         "type": "locality",
         "strategicObjective": false
       }
@@ -11164,126 +11470,6 @@
     "wallEdges": [
       {
         "from": {
-          "q": 66,
-          "r": 29
-        },
-        "to": {
-          "q": 69,
-          "r": 28
-        },
-        "section": "杭州旧城城防/街垒线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1200,
-        "maxHp": 1200
-      },
-      {
-        "from": {
-          "q": 69,
-          "r": 28
-        },
-        "to": {
-          "q": 72,
-          "r": 29
-        },
-        "section": "杭州旧城城防/街垒线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1200,
-        "maxHp": 1200
-      },
-      {
-        "from": {
-          "q": 72,
-          "r": 29
-        },
-        "to": {
-          "q": 73,
-          "r": 34
-        },
-        "section": "杭州旧城城防/街垒线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1200,
-        "maxHp": 1200
-      },
-      {
-        "from": {
-          "q": 73,
-          "r": 34
-        },
-        "to": {
-          "q": 70,
-          "r": 39
-        },
-        "section": "杭州旧城城防/街垒线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1200,
-        "maxHp": 1200
-      },
-      {
-        "from": {
-          "q": 70,
-          "r": 39
-        },
-        "to": {
-          "q": 67,
-          "r": 42
-        },
-        "section": "杭州旧城城防/街垒线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1200,
-        "maxHp": 1200
-      },
-      {
-        "from": {
-          "q": 67,
-          "r": 42
-        },
-        "to": {
-          "q": 64,
-          "r": 40
-        },
-        "section": "杭州旧城城防/街垒线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1200,
-        "maxHp": 1200
-      },
-      {
-        "from": {
-          "q": 64,
-          "r": 40
-        },
-        "to": {
-          "q": 63,
-          "r": 32
-        },
-        "section": "杭州旧城城防/街垒线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1200,
-        "maxHp": 1200
-      },
-      {
-        "from": {
-          "q": 63,
-          "r": 32
-        },
-        "to": {
-          "q": 66,
-          "r": 29
-        },
-        "section": "杭州旧城城防/街垒线",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1200,
-        "maxHp": 1200
-      },
-      {
-        "from": {
           "q": 67,
           "r": 43
         },
@@ -11491,6 +11677,614 @@
         "type": "wall",
         "hp": 650,
         "maxHp": 650
+      },
+      {
+        "from": {
+          "q": 65,
+          "r": 29
+        },
+        "to": {
+          "q": 66,
+          "r": 28
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 66,
+          "r": 28
+        },
+        "to": {
+          "q": 67,
+          "r": 28
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 67,
+          "r": 28
+        },
+        "to": {
+          "q": 68,
+          "r": 27
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 68,
+          "r": 27
+        },
+        "to": {
+          "q": 69,
+          "r": 27
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 69,
+          "r": 27
+        },
+        "to": {
+          "q": 70,
+          "r": 28
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 70,
+          "r": 28
+        },
+        "to": {
+          "q": 71,
+          "r": 28
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 71,
+          "r": 28
+        },
+        "to": {
+          "q": 72,
+          "r": 28
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 72,
+          "r": 28
+        },
+        "to": {
+          "q": 73,
+          "r": 29
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 29
+        },
+        "to": {
+          "q": 74,
+          "r": 30
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 74,
+          "r": 30
+        },
+        "to": {
+          "q": 75,
+          "r": 31
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 75,
+          "r": 31
+        },
+        "to": {
+          "q": 75,
+          "r": 32
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 75,
+          "r": 32
+        },
+        "to": {
+          "q": 75,
+          "r": 33
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 75,
+          "r": 33
+        },
+        "to": {
+          "q": 75,
+          "r": 34
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 75,
+          "r": 34
+        },
+        "to": {
+          "q": 75,
+          "r": 35
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 75,
+          "r": 35
+        },
+        "to": {
+          "q": 75,
+          "r": 36
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 75,
+          "r": 36
+        },
+        "to": {
+          "q": 74,
+          "r": 37
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 74,
+          "r": 37
+        },
+        "to": {
+          "q": 74,
+          "r": 38
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 74,
+          "r": 38
+        },
+        "to": {
+          "q": 74,
+          "r": 39
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 74,
+          "r": 39
+        },
+        "to": {
+          "q": 73,
+          "r": 40
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 40
+        },
+        "to": {
+          "q": 72,
+          "r": 41
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 72,
+          "r": 41
+        },
+        "to": {
+          "q": 71,
+          "r": 42
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 71,
+          "r": 42
+        },
+        "to": {
+          "q": 70,
+          "r": 42
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 70,
+          "r": 42
+        },
+        "to": {
+          "q": 69,
+          "r": 42
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 69,
+          "r": 42
+        },
+        "to": {
+          "q": 68,
+          "r": 42
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 68,
+          "r": 42
+        },
+        "to": {
+          "q": 67,
+          "r": 42
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 67,
+          "r": 42
+        },
+        "to": {
+          "q": 66,
+          "r": 41
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 66,
+          "r": 41
+        },
+        "to": {
+          "q": 65,
+          "r": 40
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 65,
+          "r": 40
+        },
+        "to": {
+          "q": 64,
+          "r": 39
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 39
+        },
+        "to": {
+          "q": 64,
+          "r": 38
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 38
+        },
+        "to": {
+          "q": 64,
+          "r": 37
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 37
+        },
+        "to": {
+          "q": 64,
+          "r": 36
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 36
+        },
+        "to": {
+          "q": 64,
+          "r": 35
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 35
+        },
+        "to": {
+          "q": 64,
+          "r": 34
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 34
+        },
+        "to": {
+          "q": 64,
+          "r": 33
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 33
+        },
+        "to": {
+          "q": 64,
+          "r": 32
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 32
+        },
+        "to": {
+          "q": 64,
+          "r": 31
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 31
+        },
+        "to": {
+          "q": 65,
+          "r": 30
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 65,
+          "r": 30
+        },
+        "to": {
+          "q": 65,
+          "r": 29
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
       }
     ],
     "urbanDefenseRules": {
@@ -11587,52 +12381,48 @@
         "landMovement": "impassable",
         "polygon": [
           [
-            59,
-            47
+            58,
+            31
           ],
           [
             60,
-            45
+            29
+          ],
+          [
+            63,
+            29
+          ],
+          [
+            65,
+            31
+          ],
+          [
+            65,
+            34
+          ],
+          [
+            64,
+            37
           ],
           [
             62,
-            44
-          ],
-          [
-            64,
-            44
-          ],
-          [
-            66,
-            45
-          ],
-          [
-            67,
-            47
-          ],
-          [
-            67,
-            50
-          ],
-          [
-            66,
-            52
-          ],
-          [
-            64,
-            54
-          ],
-          [
-            61,
-            54
+            40
           ],
           [
             59,
-            52
+            40
           ],
           [
-            58,
-            50
+            57,
+            38
+          ],
+          [
+            56,
+            35
+          ],
+          [
+            57,
+            33
           ]
         ]
       },
@@ -11788,8 +12578,8 @@
     "labels": [
       {
         "name": "西湖",
-        "q": 63,
-        "r": 49,
+        "q": 61,
+        "r": 34,
         "type": "water"
       },
       {
@@ -11824,9 +12614,57 @@
       },
       {
         "name": "紫金港",
-        "q": 60,
-        "r": 36,
+        "q": 58,
+        "r": 27,
         "type": "locality"
+      },
+      {
+        "name": "武林门",
+        "q": 66,
+        "r": 29,
+        "type": "gate"
+      },
+      {
+        "name": "艮山门",
+        "q": 73,
+        "r": 30,
+        "type": "gate"
+      },
+      {
+        "name": "清泰门",
+        "q": 75,
+        "r": 35,
+        "type": "gate"
+      },
+      {
+        "name": "望江门",
+        "q": 73,
+        "r": 40,
+        "type": "gate"
+      },
+      {
+        "name": "候潮门",
+        "q": 70,
+        "r": 42,
+        "type": "gate"
+      },
+      {
+        "name": "清波门",
+        "q": 65,
+        "r": 39,
+        "type": "gate"
+      },
+      {
+        "name": "涌金门",
+        "q": 64,
+        "r": 35,
+        "type": "gate"
+      },
+      {
+        "name": "钱塘门",
+        "q": 64,
+        "r": 32,
+        "type": "gate"
       }
     ]
   },
