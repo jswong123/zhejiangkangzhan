@@ -9510,16 +9510,6 @@
   "strategicObjectives": {
     "chinese": [
       {
-        "id": "c1",
-        "title": "守住告岭",
-        "description": "迟滞天目山方向日军。",
-        "priority": "secondary",
-        "deadlineTurn": 8,
-        "q": 8,
-        "r": 8,
-        "action": "defend"
-      },
-      {
         "id": "c2",
         "title": "余杭迟滞",
         "description": "第10回合前维持余杭阻击。",
