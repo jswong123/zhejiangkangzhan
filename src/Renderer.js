@@ -44,6 +44,7 @@ export class Renderer {
 
     constructor(
 
+
         canvas,
 
         world,
@@ -133,6 +134,7 @@ export class Renderer {
                 "#747660",
 
             road:
+
 
                 "#a38e69",
 
@@ -224,6 +226,7 @@ export class Renderer {
 
     ) {
 
+
         const size =
 
             this.hexSize;
@@ -313,6 +316,7 @@ export class Renderer {
                 q,
 
                 r
+
 
             );
 
@@ -404,6 +408,7 @@ export class Renderer {
 
                         r
 
+
                     );
 
                 drawHexPath(
@@ -493,6 +498,7 @@ export class Renderer {
     // ========================================================
 
     // 将地图要素节点转换成 Hex
+
 
     // ========================================================
 
@@ -584,6 +590,7 @@ export class Renderer {
 
         ctx.save();
 
+
         ctx.strokeStyle =
 
             color;
@@ -674,6 +681,7 @@ export class Renderer {
 
                 const p =
 
+
                     this.worldToScreen(
 
                         hex.q,
@@ -763,6 +771,7 @@ export class Renderer {
     }
 
     // ========================================================
+
 
     // 道路
 
@@ -899,6 +908,7 @@ export class Renderer {
 
                 "cities",
 
+
                 "towns"
 
             );
@@ -988,6 +998,7 @@ export class Renderer {
                     Math.max(
 
                         10,
+
 
                         13 *
 
@@ -1079,6 +1090,7 @@ export class Renderer {
 
             const [
 
+
                 q,
 
                 r
@@ -1169,6 +1181,7 @@ export class Renderer {
 
                     "center";
 
+
                 ctx.textBaseline =
 
                     "middle";
@@ -1213,6 +1226,7 @@ export class Renderer {
         if (["newmil", "new_military", "rebel"].includes(v)) return "new_military";
 
         return v;
+
     }
 
     setScenarioSides(attacker, defender) {
@@ -1394,6 +1408,7 @@ export class Renderer {
 
             ctx.font = `${Math.max(7, height * 0.30)}px FangSong, STKaiti, serif`;
 
+
             ctx.textAlign = "left";
 
             ctx.textBaseline = "middle";
@@ -1484,6 +1499,7 @@ export class Renderer {
 
             ctx.lineTo(x + width * 0.30, y + height * 0.25);
 
+
             ctx.moveTo(x + width * 0.30, y - height * 0.25);
 
             ctx.lineTo(x - width * 0.30, y + height * 0.25);
@@ -1520,22 +1536,112 @@ export class Renderer {
     // 城墙边界层
     // ========================================================
     drawWallEdges() {
-        const edges=this.world?.wallEdges ?? this.world?.config?.wallEdges ?? [];
-        if(!Array.isArray(edges)||!edges.length)return;
-        const ctx=this.ctx;
-        for(const e of edges){
-            const a=e?.from??{},b=e?.to??{};
-            const p1=this.worldToScreen(Number(a.q),Number(a.r)),p2=this.worldToScreen(Number(b.q),Number(b.r));
-            if(!Number.isFinite(p1.x)||!Number.isFinite(p2.x))continue;
-            const mx=(p1.x+p2.x)/2,my=(p1.y+p2.y)/2,dx=p2.x-p1.x,dy=p2.y-p1.y,len=Math.hypot(dx,dy)||1,nx=-dy/len,ny=dx/len,half=this.hexSize*this.camera.zoom*.52;
-            const hp=Number(e.hp??e.maxHp??1);
-            const status=hp<=0?'breached':String(e.status??'intact').toLowerCase();
-            // 城墙耐久归零即形成缺口：地图上不再绘制该段，同时寻路允许通过。
-            if (hp <= 0 || ['breached','destroyed'].includes(status)) continue;
-            ctx.save();ctx.strokeStyle='#3f3a2d';ctx.lineCap='square';ctx.lineWidth=Math.max(2.4,4.2*this.camera.zoom);
-            if(status==='open')ctx.setLineDash([half*.18,half*.64,half*.18]);else ctx.setLineDash([]);
-            ctx.beginPath();ctx.moveTo(mx-nx*half,my-ny*half);ctx.lineTo(mx+nx*half,my+ny*half);ctx.stroke();ctx.restore();
+        const edges = this.world?.wallEdges ?? this.world?.config?.wallEdges ?? [];
+        if (!Array.isArray(edges) || !edges.length) return;
+
+        const ctx = this.ctx;
+        const size = this.hexSize * this.camera.zoom;
+
+        // pointy-top 六角格六个顶点。与 hexToWorld() 使用同一套几何关系。
+        const hexCorners = (q, r) => {
+
+            const c = this.worldToScreen(Number(q), Number(r));
+            const pts = [];
+            for (let i = 0; i < 6; i++) {
+                const angle = Math.PI / 180 * (30 + i * 60);
+                pts.push({
+                    x: c.x + size * Math.cos(angle),
+                    y: c.y + size * Math.sin(angle)
+                });
+            }
+            return pts;
+        };
+
+        // 找两个相邻六角格真正重合的两个顶点。
+        // 这样城墙严格画在公共边上，而不是用“中心点中点+垂线”近似。
+        const sharedEdge = (a, b) => {
+            const ca = hexCorners(a.q, a.r);
+            const cb = hexCorners(b.q, b.r);
+            const matches = [];
+            const tolerance = Math.max(0.75, size * 0.035);
+
+            for (const pa of ca) {
+                for (const pb of cb) {
+                    if (Math.hypot(pa.x - pb.x, pa.y - pb.y) <= tolerance) {
+                        matches.push({
+                            x: (pa.x + pb.x) / 2,
+                            y: (pa.y + pb.y) / 2
+                        });
+                    }
+                }
+            }
+
+            // 去重
+            const unique = [];
+            for (const p of matches) {
+                if (!unique.some(u => Math.hypot(u.x - p.x, u.y - p.y) < tolerance)) {
+                    unique.push(p);
+                }
+            }
+            return unique.length >= 2 ? [unique[0], unique[1]] : null;
+        };
+
+        ctx.save();
+        ctx.strokeStyle = "#3f3a2d";
+        ctx.lineCap = "round";
+        ctx.lineJoin = "round";
+
+        ctx.lineWidth = Math.max(2.4, 4.2 * this.camera.zoom);
+
+        for (const e of edges) {
+            const a = e?.from ?? {};
+            const b = e?.to ?? {};
+            const aq = Number(a.q), ar = Number(a.r);
+            const bq = Number(b.q), br = Number(b.r);
+
+            if (![aq, ar, bq, br].every(Number.isFinite)) continue;
+
+            const hp = Number(e.hp ?? e.maxHp ?? 1);
+            const status = hp <= 0
+                ? "breached"
+                : String(e.status ?? "intact").toLowerCase();
+
+            // 已摧毁城墙不绘制。
+            if (hp <= 0 || ["breached", "destroyed"].includes(status)) continue;
+
+            const edge = sharedEdge(
+                { q: aq, r: ar },
+                { q: bq, r: br }
+            );
+
+            // wallEdges 正常情况下必须连接两个相邻六角格。
+            // 若数据中出现非相邻格，不再画一条错误的孤立斜线。
+            if (!edge) {
+                console.warn(
+                    "[Renderer] 跳过非相邻 wallEdge：",
+                    `${aq},${ar} -> ${bq},${br}`
+                );
+                continue;
+            }
+
+            const [p1, p2] = edge;
+
+            if (status === "open") {
+                const seg = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+                ctx.setLineDash([seg * 0.18, seg * 0.64, seg * 0.18]);
+            } else {
+                ctx.setLineDash([]);
+            }
+
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+
+            ctx.stroke();
         }
+
+        ctx.setLineDash([]);
+        ctx.restore();
     }
 
     // ========================================================
@@ -1621,6 +1727,7 @@ export class Renderer {
                 key.q !== undefined &&
 
                 key.r !== undefined
+
 
             ) {
 
@@ -1712,6 +1819,7 @@ export class Renderer {
 
                 ctx.lineTo(p.x + half * 0.68, y + size * 0.03);
 
+
                 ctx.stroke();
 
             }
@@ -1756,6 +1864,7 @@ export class Renderer {
         // 当前兵力
         const current = Number(
             unit?.strength ??
+
             unit?.manpower ??
             0
         );
@@ -1801,6 +1910,7 @@ export class Renderer {
 
         const selected =
             this.selection &&
+
             this.selection.selectedUnit === unit;
 
         if (selected) {
@@ -1848,6 +1958,7 @@ export class Renderer {
         ctx.restore();
 
 
+
         // ========================================================
         //  军事单位符号
         // ========================================================
@@ -1891,6 +2002,7 @@ export class Renderer {
         // ========================================================
         // 单位名称
         // ========================================================
+
 
         const shortName = this.compactUnitName(
             unit.shortName ??
@@ -1936,6 +2048,7 @@ export class Renderer {
             unit.type ??
             unit.unitType ??
             unit.branch ??
+
             ""
         )
             .toLowerCase()
@@ -2027,6 +2140,7 @@ export class Renderer {
         }
     }
 
+
 // ========================================================
 // 总渲染
 // ========================================================
@@ -2071,6 +2185,7 @@ render(
     // ========================================================
     // 移动范围
     // 必须位于单位下面
+
     // ========================================================
 
     this.drawMovementRange();
