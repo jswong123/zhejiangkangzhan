@@ -245,6 +245,24 @@ export const CAMPAIGNS = [
                 ]
             },
             {
+                id: "china_1942_45_full", name: "1942–1945：反攻与战争后期",
+                scenarios: [
+                    { id: "yenangyaung_1942", name: "仁安羌大捷", dateText: "1942年4月", location: "缅甸·仁安羌", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
+                    { id: "western_hubei_1943", name: "鄂西会战", dateText: "1943年5月—6月", location: "湖北西部", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
+                    { id: "burma_yunnan_1943", name: "缅北滇西战役", dateText: "1943—1945年", location: "缅北—滇西", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
+                    { id: "changde", name: "常德会战", dateText: "1943年11月—12月", location: "湖南·常德", status: "available", scenarioPath: "./data/scenario-changde.json", unitsPath: "./data/units-changde.json", factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, start:{year:1943,month:11,day:2,hour:8,minute:0,hoursPerTurn:6,startingPhase:"japanese"}, urbanDefense:true, wallSystem:true },
+                    { id: "ichigo_1944", name: "豫湘桂会战", dateText: "1944年4月—12月", location: "河南—湖南—广西", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
+                    { id: "central_henan_1944", name: "豫中会战", dateText: "1944年4月—6月", location: "河南", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
+                    { id: "myitkyina_1944", name: "密支那战役", dateText: "1944年5月—8月", location: "缅甸·密支那", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:true, wallSystem:true },
+                    { id: "changheng_1944", name: "长衡会战", dateText: "1944年5月—8月", location: "长沙—衡阳", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:true, wallSystem:true },
+                    { id: "hengyang", name: "衡阳保卫战", dateText: "1944年6月23日—8月8日", location: "湖南·衡阳", status: "available", scenarioPath: "./data/scenario-hengyang.json", unitsPath: "./data/units-hengyang.json", factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, start:{year:1944,month:6,day:23,hour:8,minute:0,hoursPerTurn:6,startingPhase:"japanese"}, urbanDefense:true, wallSystem:true },
+                    { id: "guilin_liuzhou", name: "桂柳会战", dateText: "1944年9月—11月", location: "广西·桂林—柳州", status: "available", scenarioPath: "./data/scenario-guilin_liuzhou.json", unitsPath: "./data/units-guilin_liuzhou.json", factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, start:{year:1944,month:9,day:14,hour:8,minute:0,hoursPerTurn:6,startingPhase:"japanese"}, urbanDefense:true, wallSystem:true },
+                    { id: "xiangyuegan_1945", name: "湘粤赣战役", dateText: "1945年1月—3月", location: "湖南—广东—江西", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
+                    { id: "western_henan_hubei_1945", name: "豫西鄂北会战", dateText: "1945年3月—5月", location: "河南西部—湖北北部", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
+                    { id: "west_hunan", name: "湘西会战", dateText: "1945年4月—6月", location: "湖南西部", status: "available", scenarioPath: "./data/scenario-west_hunan.json", unitsPath: "./data/units-west_hunan.json", factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, start:{year:1945,month:4,day:9,hour:8,minute:0,hoursPerTurn:6,startingPhase:"japanese"}, urbanDefense:false, wallSystem:false }
+                ]
+            }
+          {
                 id: "zhejiang_resistance", name: "浙江抗战",
                 scenarios: [
                     {
@@ -268,24 +286,6 @@ export const CAMPAIGNS = [
                     { id: "zhejiang_jiangxi_1942", name: "浙赣会战", dateText: "1942年5月15日—9月", location: "浙江—江西·浙赣铁路战区", status: "available", scenarioPath: "./data/scenario-zhejiang_jiangxi.json", unitsPath: "./data/units-zhejiang_jiangxi.json", factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, start:{year:1942,month:5,day:15,hour:6,minute:0,hoursPerTurn:24,startingPhase:"japanese"}, urbanDefense:true, wallSystem:false }
                 ]
             },
-            {
-                id: "china_1942_45_full", name: "1942–1945：反攻与战争后期",
-                scenarios: [
-                    { id: "yenangyaung_1942", name: "仁安羌大捷", dateText: "1942年4月", location: "缅甸·仁安羌", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
-                    { id: "western_hubei_1943", name: "鄂西会战", dateText: "1943年5月—6月", location: "湖北西部", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
-                    { id: "burma_yunnan_1943", name: "缅北滇西战役", dateText: "1943—1945年", location: "缅北—滇西", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
-                    { id: "changde", name: "常德会战", dateText: "1943年11月—12月", location: "湖南·常德", status: "available", scenarioPath: "./data/scenario-changde.json", unitsPath: "./data/units-changde.json", factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, start:{year:1943,month:11,day:2,hour:8,minute:0,hoursPerTurn:6,startingPhase:"japanese"}, urbanDefense:true, wallSystem:true },
-                    { id: "ichigo_1944", name: "豫湘桂会战", dateText: "1944年4月—12月", location: "河南—湖南—广西", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
-                    { id: "central_henan_1944", name: "豫中会战", dateText: "1944年4月—6月", location: "河南", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
-                    { id: "myitkyina_1944", name: "密支那战役", dateText: "1944年5月—8月", location: "缅甸·密支那", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:true, wallSystem:true },
-                    { id: "changheng_1944", name: "长衡会战", dateText: "1944年5月—8月", location: "长沙—衡阳", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:true, wallSystem:true },
-                    { id: "hengyang", name: "衡阳保卫战", dateText: "1944年6月23日—8月8日", location: "湖南·衡阳", status: "available", scenarioPath: "./data/scenario-hengyang.json", unitsPath: "./data/units-hengyang.json", factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, start:{year:1944,month:6,day:23,hour:8,minute:0,hoursPerTurn:6,startingPhase:"japanese"}, urbanDefense:true, wallSystem:true },
-                    { id: "guilin_liuzhou", name: "桂柳会战", dateText: "1944年9月—11月", location: "广西·桂林—柳州", status: "available", scenarioPath: "./data/scenario-guilin_liuzhou.json", unitsPath: "./data/units-guilin_liuzhou.json", factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, start:{year:1944,month:9,day:14,hour:8,minute:0,hoursPerTurn:6,startingPhase:"japanese"}, urbanDefense:true, wallSystem:true },
-                    { id: "xiangyuegan_1945", name: "湘粤赣战役", dateText: "1945年1月—3月", location: "湖南—广东—江西", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
-                    { id: "western_henan_hubei_1945", name: "豫西鄂北会战", dateText: "1945年3月—5月", location: "河南西部—湖北北部", status: "interface", interfaceOnly: true, factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, urbanDefense:false, wallSystem:false },
-                    { id: "west_hunan", name: "湘西会战", dateText: "1945年4月—6月", location: "湖南西部", status: "available", scenarioPath: "./data/scenario-west_hunan.json", unitsPath: "./data/units-west_hunan.json", factions:["CHN","JPN"], roles:{attacker:"japanese",defender:"chinese"}, start:{year:1945,month:4,day:9,hour:8,minute:0,hoursPerTurn:6,startingPhase:"japanese"}, urbanDefense:false, wallSystem:false }
-                ]
-            }
         ]
     },
 
