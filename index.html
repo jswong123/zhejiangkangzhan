@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    >
+
+    <title>战线 1937-1945</title>
+
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23252a24%27/%3E%3Ctext x=%2732%27 y=%2744%27 text-anchor=%27middle%27 font-size=%2738%27 fill=%27%23e5ddbd%27%3E%E6%88%98%3C/text%3E%3C/svg%3E"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+    <style>
+
+        #topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-left: auto;
+        }
+
+        #save-system-controls {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        #save-system-controls button,
+        #save-system-controls select {
+            border: 1px solid #77715d;
+            background: #ded7bb;
+            color: #25271f;
+            padding: 4px 7px;
+            font: inherit;
+            font-size: 12px;
+        }
+
+        #save-system-controls button {
+            cursor: pointer;
+        }
+
+        #save-system-controls button:disabled {
+            opacity: .45;
+            cursor: default;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================================================== -->
+<!-- 主菜单 -->
+<!-- ================================================== -->
+
+<div
+    id="mainMenu"
+    class="game-overlay main-menu-overlay"
+>
+
+    <div class="main-menu-scene">
+
+
+        <!-- 游戏标题 -->
+
+        <div class="main-menu-brand">
+
+            <h1>
+                战线
+                <span>1937–1945</span>
+            </h1>
+
+            <div class="main-menu-tagline">
+                从淞沪到柏林 · 在地图上重演决定战争走向的战役
+            </div>
+
+            <div class="main-menu-version">
+                V0.11.0 · WUHAN CAMPAIGN & URBAN DEFENSE
+            </div>
+
+        </div>
+
+
+        <!-- 主菜单按钮 -->
+
+        <div class="main-menu-actions">
+
+            <button id="menuNewGame">
+                <b>战役模式</b>
+                <small>选择战场与历史战役</small>
+            </button>
+
+            <button id="menuContinue">
+                <b>继续战役</b>
+                <small>返回最近一次作战</small>
+            </button>
+
+            <button id="menuLoad">
+                <b>读取存档</b>
+                <small>从已有存档继续</small>
+            </button>
+
+            <button id="menuSettings">
+                <b>游戏设置</b>
+                <small>显示与操作选项</small>
+            </button>
+
+            <button id="menuAbout">
+                <b>制作信息</b>
+                <small>版本与开发说明</small>
+            </button>
+
+        </div>
+
+
+        <!-- 本次更新 -->
+
+        <div class="main-menu-feature">
+
+            <strong>
+                本次更新
+            </strong>
+
+            <span>
+                1938 · 武汉会战 · 城防系统扩展
+            </span>
+
+            <em>
+                武汉三镇 · 田家镇要塞 · 南京/四行/台儿庄城防
+            </em>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- ================================================== -->
+<!-- 制作信息 -->
+<!-- ================================================== -->
+
+<div
+    id="aboutModal"
+    class="game-overlay modal-overlay"
+    hidden
+>
+
+    <div class="save-modal-card about-card">
+
+        <h2>
+            制作信息
+        </h2>
+
+        <div class="about-placeholder"></div>
+
+        <div class="save-modal-actions">
+
+            <button id="closeAboutModal">
+                返回
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================================== -->
+<!-- 开发者模式 -->
+<!-- ================================================== -->
+
+<div
+    id="developerPanel"
+    hidden
+    style="
+        position: fixed;
+        left: 18px;
+        bottom: 18px;
+        z-index: 8500;
+        background: rgba(31,35,29,.94);
+        color: #eee7ca;
+        border: 1px solid #9d9575;
+        padding: 12px;
+        min-width: 260px;
+        font-family: FangSong, 仿宋, serif;
+        box-shadow: 0 4px 20px #0008;
+    "
+>
+
+    <div
+        style="
+            font-weight: 700;
+            font-size: 17px;
+            margin-bottom: 8px;
+        "
+    >
+        开发者模式
+    </div>
+
+
+    <div
+        style="
+            font-size: 12px;
+            opacity: .75;
+            margin-bottom: 8px;
+        "
+    >
+        双方算子均可直接操控 · 不影响普通阵营模式
+    </div>
+
+
+    <div
+        style="
+            display: flex;
+            gap: 6px;
+            margin-bottom: 8px;
+        "
+    >
+
+        <button id="devEndPhase">
+            结束当前方
+        </button>
+
+        <button id="devNextTurn">
+            结束双方回合
+        </button>
+
+    </div>
+
+
+    <div
+        style="
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        "
+    >
+
+        <label>
+            回合
+        </label>
+
+        <input
+            id="devTurnInput"
+            type="number"
+            min="1"
+            style="width:70px;"
+        >
+
+        <button id="devSetTurn">
+            修改
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================================================== -->
+<!-- 存档 / 读档窗口 -->
+<!-- ================================================== -->
+
+<div
+    id="saveLoadModal"
+    class="game-overlay modal-overlay"
+    hidden
+>
+
+    <div class="save-modal-card">
+
+        <h2 id="saveModalTitle">
+            存档
+        </h2>
+
+        <div id="saveSlotCards"></div>
+
+
+        <div class="save-modal-actions">
+
+            <button id="importSaveButton">
+                导入存档
+            </button>
+
+            <input
+                id="importSaveFile"
+                type="file"
+                accept="application/json,.json"
+                hidden
+            >
+
+            <button id="closeSaveModal">
+                关闭
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================================== -->
+<!-- 暂停菜单 -->
+<!-- ================================================== -->
+
+<div
+    id="pauseMenu"
+    class="game-overlay modal-overlay"
+    hidden
+>
+
+    <div class="pause-card">
+
+        <h2>
+            游戏菜单
+        </h2>
+
+        <button id="pauseResume">
+            继续游戏
+        </button>
+
+        <button id="pauseSave">
+            保存游戏
+        </button>
+
+        <button id="pauseLoad">
+            读取游戏
+        </button>
+
+        <button id="pauseMain">
+            返回主界面
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================================================== -->
+<!-- 游戏主体 -->
+<!-- ================================================== -->
+
+<div id="game">
+
+
+    <!-- ============================================== -->
+    <!-- 顶部状态栏 -->
+    <!-- ============================================== -->
+
+    <header id="topbar">
+
+
+        <!-- 左侧标题 -->
+
+        <div>
+
+            <strong>
+                战线 1937-1945
+            </strong>
+
+            <span class="subtitle">
+                历史战争推演 · V0.11.0
+            </span>
+
+        </div>
+
+
+        <!-- 右侧状态 -->
+
+        <div id="topbar-right">
+
+
+            <!-- 当前回合 -->
+
+            <div id="turnInfo">
+                正在加载战役…
+            </div>
+
+
+            <!-- 存档系统 -->
+
+            <div
+                id="save-system-controls"
+                aria-label="存档与撤销"
+            >
+
+                <select
+                    id="save-slot-select"
+                    aria-label="存档槽位"
+                >
+
+                    <option value="1">
+                        存档 1
+                    </option>
+
+                    <option value="2">
+                        存档 2
+                    </option>
+
+                    <option value="3">
+                        存档 3
+                    </option>
+
+                </select>
+
+
+                <button
+                    id="save-game-button"
+                    type="button"
+                >
+                    保存
+                </button>
+
+
+                <button
+                    id="load-game-button"
+                    type="button"
+                >
+                    读取
+                </button>
+
+
+                <button
+                    id="undo-game-button"
+                    type="button"
+                >
+                    撤销
+                </button>
+
+
+                <button
+                    id="menu-game-button"
+                    type="button"
+                >
+                    ≡ 菜单
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ============================================== -->
+    <!-- 游戏主区域 -->
+    <!-- ============================================== -->
+
+    <main id="main">
+
+
+        <!-- ========================================== -->
+        <!-- 地图 -->
+        <!-- ========================================== -->
+
+        <section id="mapArea">
+
+
+            <!-- 六角格地图 -->
+
+            <canvas id="game-canvas"></canvas>
+
+
+            <!-- ====================================== -->
+            <!-- 地块信息 -->
+            <!-- ====================================== -->
+
+            <section
+                id="terrainFloat"
+                aria-label="地块信息"
+            >
+
+                <h2>
+                    地块信息
+                </h2>
+
+                <div
+                    id="hexInfoPanel"
+                    class="hex-info-panel"
+                >
+
+                    <p class="hint">
+                        点击地块查看信息
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ====================================== -->
+            <!-- 单位信息 -->
+            <!-- ====================================== -->
+
+            <section
+                id="unitFloat"
+                aria-label="单位信息"
+            >
+
+                <div class="unit-float-title">
+                    单位信息
+                </div>
+
+
+                <!-- 工兵操作 -->
+
+                <div
+                    id="engineerActions"
+                    class="engineer-actions"
+                    hidden
+                >
+
+                    <button
+                        id="buildFortButton"
+                        type="button"
+                    >
+                        构筑工事
+                    </button>
+
+
+                    <button
+                        id="layMineButton"
+                        type="button"
+                    >
+                        布置地雷
+                    </button>
+
+
+                    <button
+                        id="clearMineButton"
+                        type="button"
+                    >
+                        排除地雷
+                    </button>
+
+                </div>
+
+
+                <!-- 单位详细信息 -->
+
+                <div id="unitInfo">
+
+                    <p class="hint">
+                        点击地图上的单位查看详情
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- 右侧作战信息 -->
+        <!-- ========================================== -->
+
+        <aside
+            id="operationPanel"
+            aria-label="作战信息"
+        >
+
+
+            <h2>
+                作战信息
+            </h2>
+
+
+            <!-- ====================================== -->
+            <!-- 回合信息 -->
+            <!-- ====================================== -->
+
+            <div id="turnPanel">
+
+
+                <div class="turn-row">
+
+                    <span>
+                        回合
+                    </span>
+
+                    <strong id="turnNumber">
+                        第1回合
+                    </strong>
+
+                </div>
+
+
+                <div class="turn-row">
+
+                    <span>
+                        时间
+                    </span>
+
+                    <strong id="turnTime">
+                        08:00—14:00
+                    </strong>
+
+                </div>
+
+
+                <div class="turn-row">
+
+                    <span>
+                        行动方
+                    </span>
+
+                    <strong id="turnPhase">
+                        正在加载…
+                    </strong>
+
+                </div>
+
+
+                <button
+                    id="endPhaseButton"
+                    type="button"
+                >
+                    结束回合
+                </button>
+
+
+            </div>
+
+
+            <!-- ====================================== -->
+            <!-- 战略目标 -->
+            <!-- ====================================== -->
+
+            <div id="strategicObjectives"></div>
+
+
+            <!-- ====================================== -->
+            <!-- 增援系统 -->
+            <!-- ====================================== -->
+
+            <div
+                id="reinforcementPanel"
+                class="reinforcement-panel"
+                hidden
+            >
+
+                <h3>
+                    增援
+                </h3>
+
+
+                <div class="reinforcement-scroll">
+
+
+                    <div class="reinforcement-section-label">
+                        待到达
+                    </div>
+
+
+                    <div id="reinforcementNext"></div>
+
+
+                    <div
+                        class="reinforcement-section-label reinforcement-log-label"
+                    >
+                        到达记录
+                    </div>
+
+
+                    <div id="reinforcementLog"></div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- ====================================== -->
+            <!-- 地图操作帮助 -->
+            <!-- ====================================== -->
+
+            <div class="operation-help">
+
+                <h3>
+                    地图操作
+                </h3>
+
+                <p>
+                    鼠标拖动：移动地图
+                </p>
+
+                <p>
+                    滚轮：缩放
+                </p>
+
+                <p>
+                    ESC：取消选择
+                </p>
+
+                <p>
+                    E：结束当前行动阶段
+                </p>
+
+            </div>
+
+
+        </aside>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- ================================================== -->
+<!-- 游戏入口 -->
+<!-- ================================================== -->
+
+<script
+    type="module"
+    src="./src/main.js"
+>
+</script>
+
+
+</body>
+
+</html>
