@@ -8,25 +8,8 @@
   "startTime": "06:00",
   "hoursPerTurn": 6,
   "startingPhase": "japanese",
-  "version": "3.2-hangzhou-wall-defensiveline-fix",
-  "notes": [
-    "总时限25回合。",
-    "杭州城防以旧城垣节点、街垒和阻绝线抽象表示，不代表1937年仍有完整连续古城墙。",
-    "钱塘江大桥为核心战略设施。",
-    "V2.3：杭州城区加入抽象城防线、城门据点、外围阻击阵地、笕桥机场与钱塘江桥头防御。1937年杭州并非完整古城墙状态，wallEdges用于表现战役级街垒/阻绝线。",
-    "日军后续梯队按第6—14回合分批进入；具体下级分遣队名称为游戏化编制，不作为史实番号断言。",
-    "V2.4：钱塘江改为实体不可通行水域带；陆军仅允许经钱塘江大桥通行。",
-    "V2.4：临安、青山镇增设中国守军；中日双方增援重新校准。",
-    "V2.5：补全西湖、西溪湿地、青山湖、京杭大运河；湖泊/运河实体化，西溪采用湿地+内部水道。",
-    "V2.5：钱塘江继续仅允许经钱塘江大桥通过；大运河仅允许经指定桥梁通过。",
-    "V2.6：保留并强化现有西湖与杭州旧城城防表现；新增紫金港地名；取消告岭战略目标判定，但保留告岭地名及既有阵地。",
-    "V2.7：纠正紫金港位置；将西湖水面移至杭州旧城西侧并实体化为water；杭州旧城墙重做为连续闭合wallEdges；其余部队、增援、道路、水系和战略目标保持不变；告岭仍非战略目标。",
-    "V2.8：仅修正杭州城墙显示。将旧城墙改为逐格相邻的闭合城防线，避免渲染为散落长黑线；西湖、紫金港、部队、增援、道路、水系及战略目标保持V2.7不变。",
-    "V2.9：缩小并重新塑形西湖实体水域，使其更贴近杭州旧城西侧且恢复西湖南、西侧山地；调整富阳地图标记至杭州西南、钱塘江上游方向；保留V2.8杭州城墙修正。",
-    "V3.0：富阳移至富春江北岸陆地县城位置；西湖北缘退水，恢复岳庙、宝石山及北岸陆地；杭州旧城墙增加明确闭合段。",
-    "V3.1：修改岳坟位置显示，富阳标记点。",
-    "V3.2：保留V3.1岳坟与富阳坐标不变；修复JSON语法；wallEdges仅保留杭州旧城闭合城防线，外围阻绝线移入defensiveLines，避免与城墙混绘。"
-  ],
+  "version": "3.2-hangzhou-wall-defensiveline-fix-wall-closed",
+  "notes": "['总时限25回合。', '杭州城防以旧城垣节点、街垒和阻绝线抽象表示，不代表1937年仍有完整连续古城墙。', '钱塘江大桥为核心战略设施。', 'V2.3：杭州城区加入抽象城防线、城门据点、外围阻击阵地、笕桥机场与钱塘江桥头防御。1937年杭州并非完整古城墙状态，wallEdges用于表现战役级街垒/阻绝线。', '日军后续梯队按第6—14回合分批进入；具体下级分遣队名称为游戏化编制，不作为史实番号断言。', 'V2.4：钱塘江改为实体不可通行水域带；陆军仅允许经钱塘江大桥通行。', 'V2.4：临安、青山镇增设中国守军；中日双方增援重新校准。', 'V2.5：补全西湖、西溪湿地、青山湖、京杭大运河；湖泊/运河实体化，西溪采用湿地+内部水道。', 'V2.5：钱塘江继续仅允许经钱塘江大桥通过；大运河仅允许经指定桥梁通过。', 'V2.6：保留并强化现有西湖与杭州旧城城防表现；新增紫金港地名；取消告岭战略目标判定，但保留告岭地名及既有阵地。', 'V2.7：纠正紫金港位置；将西湖水面移至杭州旧城西侧并实体化为water；杭州旧城墙重做为连续闭合wallEdges；其余部队、增援、道路、水系和战略目标保持不变；告岭仍非战略目标。', 'V2.8：仅修正杭州城墙显示。将旧城墙改为逐格相邻的闭合城防线，避免渲染为散落长黑线；西湖、紫金港、部队、增援、道路、水系及战略目标保持V2.7不变。', 'V2.9：缩小并重新塑形西湖实体水域，使其更贴近杭州旧城西侧且恢复西湖南、西侧山地；调整富阳地图标记至杭州西南、钱塘江上游方向；保留V2.8杭州城墙修正。', 'V3.0：富阳移至富春江北岸陆地县城位置；西湖北缘退水，恢复岳庙、宝石山及北岸陆地；杭州旧城墙增加明确闭合段。', 'V3.1：修改岳坟位置显示，富阳标记点。', 'V3.2：保留V3.1岳坟与富阳坐标不变；修复JSON语法；wallEdges仅保留杭州旧城闭合城防线，外围阻绝线移入defensiveLines，避免与城墙混绘。'] 杭州旧城城墙已按六角格公共边规则重建为连续封闭边界。",
   "map": {
     "id": "hangzhou_1937",
     "name": "杭州方向作战战区",
@@ -11510,11 +11493,427 @@
     "wallEdges": [
       {
         "from": {
+          "q": 64,
+          "r": 31
+        },
+        "to": {
+          "q": 63,
+          "r": 32
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 31
+        },
+        "to": {
+          "q": 63,
+          "r": 31
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 31
+        },
+        "to": {
+          "q": 64,
+          "r": 30
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 32
+        },
+        "to": {
+          "q": 63,
+          "r": 33
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 32
+        },
+        "to": {
+          "q": 63,
+          "r": 32
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 33
+        },
+        "to": {
+          "q": 63,
+          "r": 34
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 33
+        },
+        "to": {
+          "q": 63,
+          "r": 33
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 34
+        },
+        "to": {
+          "q": 63,
+          "r": 35
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 34
+        },
+        "to": {
+          "q": 63,
+          "r": 34
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 35
+        },
+        "to": {
+          "q": 63,
+          "r": 36
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 35
+        },
+        "to": {
+          "q": 63,
+          "r": 35
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 36
+        },
+        "to": {
+          "q": 63,
+          "r": 37
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 36
+        },
+        "to": {
+          "q": 63,
+          "r": 36
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 37
+        },
+        "to": {
+          "q": 63,
+          "r": 38
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 37
+        },
+        "to": {
+          "q": 63,
+          "r": 37
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 38
+        },
+        "to": {
+          "q": 64,
+          "r": 39
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 38
+        },
+        "to": {
+          "q": 63,
+          "r": 39
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 64,
+          "r": 38
+        },
+        "to": {
+          "q": 63,
+          "r": 38
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
           "q": 65,
           "r": 29
         },
         "to": {
+          "q": 64,
+          "r": 30
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 65,
+          "r": 29
+        },
+        "to": {
+          "q": 64,
+          "r": 29
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 65,
+          "r": 29
+        },
+        "to": {
+          "q": 65,
+          "r": 28
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 65,
+          "r": 30
+        },
+        "to": {
+          "q": 64,
+          "r": 30
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 65,
+          "r": 38
+        },
+        "to": {
+          "q": 64,
+          "r": 39
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 65,
+          "r": 39
+        },
+        "to": {
+          "q": 65,
+          "r": 40
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 65,
+          "r": 39
+        },
+        "to": {
+          "q": 64,
+          "r": 40
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 65,
+          "r": 39
+        },
+        "to": {
+          "q": 64,
+          "r": 39
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
           "q": 66,
+          "r": 28
+        },
+        "to": {
+          "q": 65,
           "r": 28
         },
         "section": "杭州旧城城墙",
@@ -11530,8 +11929,104 @@
           "r": 28
         },
         "to": {
+          "q": 66,
+          "r": 27
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 66,
+          "r": 28
+        },
+        "to": {
+          "q": 67,
+          "r": 27
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 66,
+          "r": 39
+        },
+        "to": {
+          "q": 65,
+          "r": 40
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 66,
+          "r": 40
+        },
+        "to": {
+          "q": 66,
+          "r": 41
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 66,
+          "r": 40
+        },
+        "to": {
+          "q": 65,
+          "r": 41
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 66,
+          "r": 40
+        },
+        "to": {
+          "q": 65,
+          "r": 40
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
           "q": 67,
           "r": 28
+        },
+        "to": {
+          "q": 67,
+          "r": 27
         },
         "section": "杭州旧城城墙",
         "status": "intact",
@@ -11547,7 +12042,55 @@
         },
         "to": {
           "q": 68,
+          "r": 27
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 67,
+          "r": 40
+        },
+        "to": {
+          "q": 67,
+          "r": 41
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 67,
+          "r": 40
+        },
+        "to": {
+          "q": 66,
+          "r": 41
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 68,
           "r": 28
+        },
+        "to": {
+          "q": 68,
+          "r": 27
         },
         "section": "杭州旧城城墙",
         "status": "intact",
@@ -11563,7 +12106,55 @@
         },
         "to": {
           "q": 69,
+          "r": 27
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 68,
+          "r": 40
+        },
+        "to": {
+          "q": 68,
+          "r": 41
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 68,
+          "r": 40
+        },
+        "to": {
+          "q": 67,
+          "r": 41
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 69,
           "r": 28
+        },
+        "to": {
+          "q": 69,
+          "r": 27
         },
         "section": "杭州旧城城墙",
         "status": "intact",
@@ -11579,7 +12170,39 @@
         },
         "to": {
           "q": 70,
-          "r": 28
+          "r": 27
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 69,
+          "r": 40
+        },
+        "to": {
+          "q": 69,
+          "r": 41
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 69,
+          "r": 40
+        },
+        "to": {
+          "q": 68,
+          "r": 41
         },
         "section": "杭州旧城城墙",
         "status": "intact",
@@ -11606,28 +12229,44 @@
       },
       {
         "from": {
-          "q": 71,
+          "q": 70,
           "r": 28
         },
         "to": {
-          "q": 72,
+          "q": 70,
+          "r": 27
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 70,
+          "r": 28
+        },
+        "to": {
+          "q": 71,
+          "r": 27
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 70,
           "r": 29
         },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 72,
-          "r": 29
-        },
         "to": {
-          "q": 73,
-          "r": 30
+          "q": 71,
+          "r": 28
         },
         "section": "杭州旧城城墙",
         "status": "intact",
@@ -11638,152 +12277,8 @@
       },
       {
         "from": {
-          "q": 73,
-          "r": 30
-        },
-        "to": {
-          "q": 74,
-          "r": 31
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 74,
-          "r": 31
-        },
-        "to": {
-          "q": 74,
-          "r": 32
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 74,
-          "r": 32
-        },
-        "to": {
-          "q": 74,
-          "r": 33
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 74,
-          "r": 33
-        },
-        "to": {
-          "q": 74,
-          "r": 34
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 74,
-          "r": 34
-        },
-        "to": {
-          "q": 74,
-          "r": 35
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 74,
-          "r": 35
-        },
-        "to": {
-          "q": 74,
-          "r": 36
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 74,
-          "r": 36
-        },
-        "to": {
-          "q": 74,
-          "r": 37
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 74,
-          "r": 37
-        },
-        "to": {
-          "q": 73,
-          "r": 38
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 73,
-          "r": 38
-        },
-        "to": {
-          "q": 72,
-          "r": 39
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 72,
-          "r": 39
+          "q": 70,
+          "r": 40
         },
         "to": {
           "q": 71,
@@ -11798,7 +12293,7 @@
       },
       {
         "from": {
-          "q": 71,
+          "q": 70,
           "r": 40
         },
         "to": {
@@ -11815,7 +12310,7 @@
       {
         "from": {
           "q": 70,
-          "r": 41
+          "r": 40
         },
         "to": {
           "q": 69,
@@ -11830,220 +12325,444 @@
       },
       {
         "from": {
-          "q": 69,
-          "r": 41
-        },
-        "to": {
-          "q": 68,
-          "r": 41
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 68,
-          "r": 41
-        },
-        "to": {
-          "q": 67,
-          "r": 41
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 67,
-          "r": 41
-        },
-        "to": {
-          "q": 66,
-          "r": 40
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 66,
-          "r": 40
-        },
-        "to": {
-          "q": 65,
-          "r": 39
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 65,
-          "r": 39
-        },
-        "to": {
-          "q": 64,
-          "r": 38
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 64,
-          "r": 38
-        },
-        "to": {
-          "q": 64,
-          "r": 37
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 64,
-          "r": 37
-        },
-        "to": {
-          "q": 64,
-          "r": 36
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 64,
-          "r": 36
-        },
-        "to": {
-          "q": 64,
-          "r": 35
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 64,
-          "r": 35
-        },
-        "to": {
-          "q": 64,
-          "r": 34
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 64,
-          "r": 34
-        },
-        "to": {
-          "q": 64,
-          "r": 33
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 64,
-          "r": 33
-        },
-        "to": {
-          "q": 64,
-          "r": 32
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 64,
-          "r": 32
-        },
-        "to": {
-          "q": 64,
-          "r": 31
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 64,
-          "r": 31
-        },
-        "to": {
-          "q": 65,
-          "r": 30
-        },
-        "section": "杭州旧城城墙",
-        "status": "intact",
-        "type": "wall",
-        "hp": 1400,
-        "maxHp": 1400,
-        "defenseBonus": 0.35
-      },
-      {
-        "from": {
-          "q": 65,
-          "r": 30
-        },
-        "to": {
-          "q": 65,
+          "q": 71,
           "r": 29
+        },
+        "to": {
+          "q": 72,
+          "r": 29
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 71,
+          "r": 29
+        },
+        "to": {
+          "q": 71,
+          "r": 28
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 71,
+          "r": 29
+        },
+        "to": {
+          "q": 72,
+          "r": 28
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 71,
+          "r": 30
+        },
+        "to": {
+          "q": 72,
+          "r": 29
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 71,
+          "r": 39
+        },
+        "to": {
+          "q": 72,
+          "r": 39
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 71,
+          "r": 39
+        },
+        "to": {
+          "q": 71,
+          "r": 40
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 72,
+          "r": 30
+        },
+        "to": {
+          "q": 73,
+          "r": 30
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 72,
+          "r": 30
+        },
+        "to": {
+          "q": 72,
+          "r": 29
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 72,
+          "r": 30
+        },
+        "to": {
+          "q": 73,
+          "r": 29
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 72,
+          "r": 31
+        },
+        "to": {
+          "q": 73,
+          "r": 30
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 72,
+          "r": 38
+        },
+        "to": {
+          "q": 73,
+          "r": 38
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 72,
+          "r": 38
+        },
+        "to": {
+          "q": 72,
+          "r": 39
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 31
+        },
+        "to": {
+          "q": 74,
+          "r": 31
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 31
+        },
+        "to": {
+          "q": 73,
+          "r": 30
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 31
+        },
+        "to": {
+          "q": 74,
+          "r": 30
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 32
+        },
+        "to": {
+          "q": 74,
+          "r": 32
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 32
+        },
+        "to": {
+          "q": 74,
+          "r": 31
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 33
+        },
+        "to": {
+          "q": 74,
+          "r": 33
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 33
+        },
+        "to": {
+          "q": 74,
+          "r": 32
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 34
+        },
+        "to": {
+          "q": 74,
+          "r": 34
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 34
+        },
+        "to": {
+          "q": 74,
+          "r": 33
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 35
+        },
+        "to": {
+          "q": 74,
+          "r": 35
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 35
+        },
+        "to": {
+          "q": 74,
+          "r": 34
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 36
+        },
+        "to": {
+          "q": 74,
+          "r": 36
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 36
+        },
+        "to": {
+          "q": 74,
+          "r": 35
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 37
+        },
+        "to": {
+          "q": 74,
+          "r": 37
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 37
+        },
+        "to": {
+          "q": 73,
+          "r": 38
+        },
+        "section": "杭州旧城城墙",
+        "status": "intact",
+        "type": "wall",
+        "hp": 1400,
+        "maxHp": 1400,
+        "defenseBonus": 0.35
+      },
+      {
+        "from": {
+          "q": 73,
+          "r": 37
+        },
+        "to": {
+          "q": 74,
+          "r": 36
         },
         "section": "杭州旧城城墙",
         "status": "intact",
